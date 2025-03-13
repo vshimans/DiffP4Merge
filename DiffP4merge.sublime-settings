@@ -1,0 +1,13 @@
+{
+    // Path to the P4Merge executable.
+    // Update the path according to your operating system and installation location.
+
+    // macOS example:
+    "p4merge_path": "/Applications/p4merge.app/Contents/MacOS/p4merge"
+
+    // Windows example:
+    // "p4merge_path": "C:\\Program Files\\Perforce\\p4merge.exe",
+
+    // Linux example:
+    // "p4merge_path": "/usr/bin/p4merge"
+}

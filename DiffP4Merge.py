@@ -31,8 +31,13 @@ class DiffP4mergeCommand(sublime_plugin.WindowCommand):
         if file1 is None or file2 is None:
             return
 
-        # Path to P4Merge executable on macOS.
-        p4merge_exe = "/Applications/p4merge.app/Contents/MacOS/p4merge"
+        # Path to P4Merge executable.
+        settings = sublime.load_settings('DiffP4merge.sublime-settings')
+        p4merge_exe = settings.get('p4merge_path', '')
+
+        if not p4merge_exe or not os.path.isfile(p4merge_exe):
+            sublime.error_message("Please configure 'p4merge_path' in DiffP4merge.sublime-settings correctly.")
+            return
 
         try:
             subprocess.Popen([p4merge_exe, file1, file2])
