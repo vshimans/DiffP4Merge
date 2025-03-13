@@ -1,0 +1,11 @@
+[
+    {
+        "id": "tools",
+        "children": [
+            {
+                "caption": "Diff P4Merge",
+                "command": "diff_p4merge"
+            }
+        ]
+    }
+]
